@@ -33,8 +33,7 @@ var SimplePDF = function (_React$Component) {
     _classCallCheck(this, SimplePDF);
 
     // bind
-
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SimplePDF).call(this, props));
+    var _this = _possibleConstructorReturn(this, (SimplePDF.__proto__ || Object.getPrototypeOf(SimplePDF)).call(this, props));
 
     _this.loadPDF = _this.loadPDF.bind(_this);
     return _this;
@@ -59,8 +58,10 @@ var SimplePDF = function (_React$Component) {
 
       _pdfCombined2.default.getDocument(this.props.file).then(function (pdf) {
 
+        var onePageScrolling = this.props.onePageScrolling || false;
+
         // no scrollbar if pdf has only one page
-        if (pdf.numPages === 1) {
+        if (pdf.numPages === 1 && !this.props.onePageScrolling) {
           node.style.overflowY = "hidden";
         }
 
