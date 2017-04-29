@@ -4,14 +4,52 @@
     <meta charset="UTF-8" />
     <title>demo</title>
     <style>
+
+    /* EXAMPLE 1 BEGIN*/
+    /*
+       This is simple example that should be used. The pdf size (each canvas)
+       will be automatically adjusted to the box size.
+    */
     .SimplePDF {
-      width: 350px;
-      height: 500px;
-      border: 1px dashed red;
-      margin: 15px;
-      padding: 15px;
-      float: left;
+      width: 350px; /* width of pdf document box should be != 0 */
+      height: 500px; /* height of pdf document box should be != 0 */
+      border: 1px dashed red; /* optional */
+      margin: 15px; /* optional */
+      padding: 15px; /* optional */
+      float: left; /* optional */
     }
+    /* EXAMPLE 1 END */
+
+
+
+    /* EXAMPLE 2 BEGIN*/
+    /*
+       This example below has zoomed in pdf document, small view area and
+       added scrollbars (all is done in CSS without changing and rebuilding
+       JavaScript code). If you want this kind of look, just use this example
+       below in your projects. Always make scrollbars in HTML, CSS using
+       Box Model and allow web browsers to do all the dirty job with correct
+       dimensioning. Never make scrollbars directly in JavaScript, unless you
+       want to open Pandora's box with deamons (read get thousand problems
+       in the future with different web browsers dimensioning).
+    */
+    /* the view box with scrollbars */
+    /*
+    .SimplePDF {
+       width: 150px;
+       height: 150px;
+       overflow: scroll;
+    }
+    */
+    /* box containing canvas, you rather shouldn't change canvas directly */
+    /*
+    .SimplePDF > div.S-PDF-ID {
+      width: 800px !important;
+      height: 800px !important;
+    }
+    */
+    /* EXAMPLE 2 END */
+
     </style>
   </head>
   <body>
