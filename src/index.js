@@ -28,8 +28,10 @@ export default class SimplePDF extends React.Component {
 
     PDF.getDocument(this.props.file).then(function(pdf) {
 
+	  var onePageScrolling = this.props.onePageScrolling || false;
+
       // no scrollbar if pdf has only one page
-      if (pdf.numPages===1) {
+      if (pdf.numPages===1 && !this.props.onePageScrolling) {
         node.style.overflowY = "hidden";
       }
 
