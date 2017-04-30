@@ -33,8 +33,7 @@ var SimplePDF = function (_React$Component) {
     _classCallCheck(this, SimplePDF);
 
     // bind
-
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SimplePDF).call(this, props));
+    var _this = _possibleConstructorReturn(this, (SimplePDF.__proto__ || Object.getPrototypeOf(SimplePDF)).call(this, props));
 
     _this.loadPDF = _this.loadPDF.bind(_this);
     return _this;
@@ -90,7 +89,7 @@ var SimplePDF = function (_React$Component) {
             page.render(renderContext);
           });
         }
-      });
+      }).catch(this.props.onError);
     }
   }, {
     key: 'render',
@@ -118,5 +117,10 @@ var SimplePDF = function (_React$Component) {
 
 exports.default = SimplePDF;
 
+
+SimplePDF.defaultProps = {
+  onError: function onError() {},
+  file: null
+};
 
 module.exports = { SimplePDF: SimplePDF };
