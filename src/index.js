@@ -59,7 +59,7 @@ export default class SimplePDF extends React.Component {
           page.render(renderContext);
         });
       }
-    });
+    }).catch(this.props.onError);
   }
 
   render() {
@@ -78,5 +78,10 @@ export default class SimplePDF extends React.Component {
     this.loadPDF();
   }
 }
+
+SimplePDF.defaultProps = {
+ onError: () => {},
+ file: null,
+};
 
 module.exports = { SimplePDF: SimplePDF };
