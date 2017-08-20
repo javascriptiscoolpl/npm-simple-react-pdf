@@ -52,6 +52,15 @@ The demo is available in module directory. To test the demo just go to <code>dem
     cd node_modules/simple-react-pdf/demo
     firefox index.html
 
+For other browsers:
+
+    google-chrome --allow-file-access-from-files index.html
+    opera --allow-file-access-from-files index.html
+
+In order to avoid [Cross-Origin Resource Sharing (CORS) issue](https://github.com/mozilla/pdf.js/wiki/Frequently-Asked-Questions#faq-xhr) consider [simple-react-pdf-service](https://www.npmjs.com/package/simple-react-pdf-service).
+
+# Demo re-build
+
 However, you can build the demo again with npm tool (e.g. after your private changes). To re-build the demo just go to <code>demo</code> directory in module folder (if you are not there already):
 
     cd node_modules/simple-react-pdf/demo

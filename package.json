@@ -1,6 +1,6 @@
 {
   "name": "simple-react-pdf",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Simple PDF React component with vertical scroll bar (pdfjs-dist, ES6 syntax, Babel, Browserify).",
   "main": "index.js",
   "repository": {
