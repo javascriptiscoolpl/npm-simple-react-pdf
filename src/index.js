@@ -14,7 +14,7 @@ export default class SimplePDF extends React.Component {
   loadPDF() {
 
     // get node for this react component
-    var node = ReactDOM.findDOMNode(this).getElementsByClassName("S-PDF-ID")[0];
+    var node = ReactDOM.findDOMNode(this._container).getElementsByClassName("S-PDF-ID")[0];
 
     // clean for update
     node.innerHTML = "";
@@ -64,7 +64,7 @@ export default class SimplePDF extends React.Component {
 
   render() {
     return (
-      <div className="SimplePDF">
+      <div className="SimplePDF" ref={container => this._container = container}>
         <div className="S-PDF-ID"></div>
       </div>
     );
